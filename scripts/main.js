@@ -15,9 +15,11 @@ var currentTime = hours + ":" + minutes + ":" + seconds;
 document.querySelector(".time").textContent = currentTime;
 
 var hexColor = leadingZero(Number(hours).toString(16)) + leadingZero(Number(minutes).toString(16)) + leadingZero(Number(seconds).toString(16));
+var hexColor2 = leadingZero((Number(hours)+20).toString(16)) + leadingZero((Number(minutes)+20).toString(16)) + leadingZero((Number(seconds)+20).toString(16));
+
 
 var background = document.querySelector('body');
-background.style.background = '#' + hexColor;
+background.style.background = '#' + hexColor + ' radial-gradient(#' + hexColor + ' , #' + hexColor2 + ')';
 
 var barWidth = Number(Math.round((time.getSeconds() / 60) * 100));
 
@@ -37,6 +39,7 @@ function timeRefresh() {
 
 
   hexColor = leadingZero(Number(hours).toString(16)) + leadingZero(Number(minutes).toString(16)) + leadingZero(Number(seconds).toString(16));
+  hexColor2 = leadingZero((Number(hours)+20).toString(16)) + leadingZero((Number(minutes)+20).toString(16)) + leadingZero((Number(seconds)+20).toString(16));
 
   document.querySelector(".time").textContent = currentTime;
 
@@ -46,7 +49,7 @@ function timeRefresh() {
 
   bar.style.width = barWidth + '%';
 
-  background.style.background = '#' + hexColor;
+  background.style.background = '#' + hexColor + ' radial-gradient(#' + hexColor + ' , #' + hexColor2 + ')';
 }
 
 setInterval(timeRefresh, 1000);

@@ -1,6 +1,11 @@
 @import '../bower_components/bourbon/app/assets/stylesheets/bourbon';
 @import '../bower_components/neat/app/assets/stylesheets/neat';
 
+body {
+  height: 400px;
+}
+
+
 .container {
   position: absolute;
   top: 40%;
@@ -32,7 +37,7 @@ h1 {
 
 .hr-container {
   max-width: 500px;
-  margin-top: 45%;
+  margin-top: 450px;
   position: relative;
   left: 50%;
   transform: translateX(-50%);
