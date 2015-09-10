@@ -9,7 +9,7 @@ function leadingZero (numb) {
 
 var time = new Date();
 var hours = leadingZero(time.getHours());
-var minutes = leadingZero(time.getHours());
+var minutes = leadingZero(time.getMinutes());
 var seconds = leadingZero(time.getSeconds());
 var currentTime = hours + ":" + minutes + ":" + seconds;
 document.querySelector(".time").textContent = currentTime;
