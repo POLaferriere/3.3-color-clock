@@ -14,8 +14,8 @@ var seconds = leadingZero(time.getSeconds());
 var currentTime = hours + ":" + minutes + ":" + seconds;
 document.querySelector(".time").textContent = currentTime;
 
-var hexColor = leadingZero(Number(hours).toString(16)) + leadingZero(Number(minutes).toString(16)) + leadingZero(Number(seconds).toString(16));
-var hexColor2 = leadingZero((Number(hours)+20).toString(16)) + leadingZero((Number(minutes)+20).toString(16)) + leadingZero((Number(seconds)+20).toString(16));
+var hexColor = leadingZero((Math.round(Number(hours)/24*255)).toString(16)) + leadingZero((Math.round(Number(minutes)/60*255)).toString(16)) + leadingZero(Math.round((Number(seconds)/60*255)).toString(16));
+var hexColor2 = "000000";
 
 
 var background = document.querySelector('body');
@@ -38,8 +38,8 @@ function timeRefresh() {
 
 
 
-  hexColor = leadingZero(Number(hours).toString(16)) + leadingZero(Number(minutes).toString(16)) + leadingZero(Number(seconds).toString(16));
-  hexColor2 = leadingZero((Number(hours)+20).toString(16)) + leadingZero((Number(minutes)+20).toString(16)) + leadingZero((Number(seconds)+20).toString(16));
+  hexColor = leadingZero((Math.round(Number(hours)/24*255)).toString(16)) + leadingZero((Math.round(Number(minutes)/60*255)).toString(16)) + leadingZero(Math.round((Number(seconds)/60*255)).toString(16));
+  hexColor2 = '000000';
 
   document.querySelector(".time").textContent = currentTime;
 
