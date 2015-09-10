@@ -32,7 +32,7 @@ function timeRefresh() {
   time = new Date();
 
   hours = leadingZero(time.getHours());
-  minutes = leadingZero(time.getHours());
+  minutes = leadingZero(time.getMinutes());
   seconds = leadingZero(time.getSeconds());
   currentTime = hours + ":" + minutes + ":" + seconds;
 
